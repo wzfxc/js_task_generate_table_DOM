@@ -1,7 +1,5 @@
 'use strict';
 
-const { createElement } = require('react');
-
 const people = [
   {
     name: 'Carolus Haverbeke',
@@ -356,9 +354,6 @@ const people = [
   },
 ];
 
-// eslint-disable-next-line no-console
-console.log(people); // you can remove it
-
 const dashboard = document.querySelector('.dashboard');
 
 people.forEach((person) => {
@@ -369,7 +364,7 @@ people.forEach((person) => {
 
   [person.name, person.sex, person.born, person.died, age, century].forEach(
     (value) => {
-      const cell = createElement('td');
+      const cell = document.createElement('td');
 
       cell.textContent = value;
       row.appendChild(cell);
