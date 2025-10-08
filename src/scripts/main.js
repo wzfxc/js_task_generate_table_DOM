@@ -356,6 +356,10 @@ const people = [
 
 const dashboard = document.querySelector('.dashboard');
 
+if (!dashboard) {
+  throw new Error("Table with class 'dashboard' not found");
+}
+
 people.forEach((person) => {
   const row = document.createElement('tr');
 
